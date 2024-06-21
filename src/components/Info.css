@@ -1,0 +1,28 @@
+#info {
+  padding-top: 10%;
+  height: fit-content;
+}
+#buttList {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 15%;
+}
+.buttons {
+  margin-top: 3%;
+  border-radius: 20px 20px;
+  height: 5vh;
+  width: 20vw;
+  background-color: white;
+}
+#message {
+  background-color: var(--orange-color);
+  color: white;
+  border: none;
+}
+
+#fav {
+  background-color: white;
+  color: var(--orange-color);
+  border: 1px solid var(--orange-color);
+}

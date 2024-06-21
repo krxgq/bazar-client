@@ -1,0 +1,66 @@
+header {
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  padding: 2%;
+  z-index: 1000;
+  background-color: white;
+  border-bottom: 2px solid #000;
+  font-size: 1.5em;
+}
+
+#logo > img {
+  width: 12.5vw;
+}
+
+header > #profile {
+  color: var(--orange-color);
+  margin-right: 4%;
+}
+
+header > #profile a {
+  color: var(--orange-color);
+}
+#profile > a > img {
+  width: 5vw;
+  border-radius: 50%;
+}
+
+header > #search_bar {
+  align-items: center;
+  position: relative; /* Add this line */
+}
+
+#search_bar > input {
+  border-radius: 15px; /* Adjust as needed */
+  border: #000 1px solid;
+  width: 45vw;
+  height: 4.5vh;
+  padding: 1%;
+  padding-right: 40px; /* Ensure space for the button */
+}
+
+#search_bar > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+#search_bar > button > svg {
+  width: 17px;
+}
+
+#icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 10%;
+}

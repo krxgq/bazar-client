@@ -1,0 +1,35 @@
+.item {
+  display: flex;
+  width: 20vw;
+  margin: 5px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5%;
+  font-size: 1.5em;
+}
+@media (hover: hover), (-ms-high-contrast: none) {
+  .item:hover {
+    scale: 1.05;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    width: 30vw;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
