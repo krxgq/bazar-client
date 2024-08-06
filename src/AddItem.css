@@ -1,3 +1,9 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 #text {
   display: flex;
   flex-direction: column;
@@ -10,7 +16,7 @@
 }
 #form {
   display: flex;
-  width: 45%;
+  width: 60vw;
   background-color: rgba(255, 255, 255, 0.75); /* 75% transparent white */
   height: 100%;
   justify-content: center;
@@ -57,4 +63,52 @@ button#submit {
   font-size: 1.5em;
   padding: 1%;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #text > h1 {
+    font-size: 3em;
+  }
+  #form {
+    width: 100vw;
+  }
+  #form > input {
+    width: 80vw;
+  }
+  #form > select {
+    width: 80vw;
+  }
+  #form > textarea {
+    width: 80vw;
+  }
+  button#submit {
+    width: 80vw;
+  }
+  #images-container {
+    width: 100vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #text > h1 {
+    font-size: 3em;
+  }
+  #form {
+    width: 70vw;
+  }
+  #form > input {
+    width: 50vw;
+  }
+  #form > select {
+    width: 51vw;
+  }
+  #form > textarea {
+    width: 50vw;
+  }
+  button#submit {
+    width: 50vw;
+  }
+  #images-container {
+    width: 50vw;
+  }
+  
 }

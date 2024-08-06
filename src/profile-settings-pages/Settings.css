@@ -1,0 +1,144 @@
+@media screen and (max-width: 768px) {
+  #centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .nav-bar > ul > li {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 4vh;
+    border-bottom: 1px solid black;
+    width: 100vw;
+    text-align: center;
+    height: 6vh;
+    align-content: center;
+  }
+  #content {
+    width: 100%;
+  }
+  #content > h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+  #changepass > h3 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  #changepass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #changepass > form > input {
+    border-radius: 15px 15px;
+    padding: 1%;
+    width: 85vw;
+    height: 3.5vh;
+    border: #000 1px solid;
+    font-size: 1.5em;
+    margin: 2%;
+  }
+  #changepass > form > button {
+    border-radius: 15px 15px;
+    width: 85vw;
+    background-color: var(--orange-color);
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 2%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #centered {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #centered {
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-bar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 20%;
+    height:100ch;
+    border-right: 1px solid black;
+    overflow-y: auto;
+  }
+  .nav-bar > ul > li {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 3vh;
+    text-align: left;
+    height: 6vh;
+    margin-top: 3%;
+    align-content: center;
+  }
+  #content {
+    width: 75%;
+    margin-left: 5%;
+  }
+
+  #footer {
+    background-color: red;
+    height: 2000px;
+  }
+   #changepass > h3 {
+    font-size: 1.5em;
+    text-align: left;
+  }
+  #changepass {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+  #changepass > form > input {
+    border-radius: 15px 15px;
+    padding: 1%;
+    width: 20vw;
+    height: 2.5vh;
+    border: #000 1px solid;
+    font-size: 1.5em;
+    margin-top: 1%;
+  }
+  #changepass > form > button {
+    border-radius: 15px 15px;
+    width: 21vw;
+    height: 5.5vh;
+    background-color: var(--orange-color);
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    margin-top: 1%;
+  }
+  .profile-container {
+    width: 15vw;
+  }
+  
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5%;
+  aspect-ratio: 1/1;
+}
+.profile-container > .profile-picture > img {
+  border-radius: 50%;
+}

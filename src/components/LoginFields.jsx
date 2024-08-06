@@ -3,6 +3,20 @@ import { login } from "../app.js";
 import "./LoginFields.css";
 
 const LoginFields = () => {
+  const handleButtonClick = () => {
+    const inputs = document.querySelectorAll("#login_fields .input");
+    let allValid = true;
+    inputs.forEach((input) => {
+      if (!input.checkValidity()) {
+        input.reportValidity();
+        allValid = false;
+      }
+    });
+    if (allValid) {
+      login();
+    }
+  };
+
   return (
     <React.StrictMode>
       <div id="login_fields">
@@ -16,17 +30,21 @@ const LoginFields = () => {
           type="text"
           id="username"
           name="username"
+          className="input"
           placeholder="Username"
+          required
         />
         <br />
         <input
           type="password"
           id="pass"
+          className="input"
           placeholder="Password"
           autoComplete="on"
+          required
         />
         <br />
-        <button onClick={login}>Continue</button>
+        <button onClick={handleButtonClick}>Continue</button>
       </div>
     </React.StrictMode>
   );

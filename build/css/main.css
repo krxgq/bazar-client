@@ -1,0 +1,26 @@
+:root {
+  --orange-color: #f18a00;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #707070;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: 80vw;
+  background-position: center;
+  background-attachment: fixed;
+}
+@media (hover: hover), (-ms-high-contrast: none) {
+  button:hover {
+    scale: 1.1;
+  }
+  svg:hover {
+    scale: 1.2;
+  }
+}

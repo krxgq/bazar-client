@@ -1,6 +1,7 @@
+/* Basic styles for header */
 header {
   width: 100vw;
-  height: 5vh;
+  height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,10 +12,12 @@ header {
   background-color: white;
   border-bottom: 2px solid #000;
   font-size: 1.5em;
+  box-sizing: border-box;
 }
 
 #logo > img {
-  width: 12.5vw;
+  max-height: 12.5vh;
+  max-width: 100%;
 }
 
 header > #profile {
@@ -25,26 +28,27 @@ header > #profile {
 header > #profile a {
   color: var(--orange-color);
 }
+
 #profile > a > img {
-  width: 5vw;
+  max-height: 12.5vh;
   border-radius: 50%;
 }
 
 header > #search_bar {
   align-items: center;
-  position: relative; /* Add this line */
+  position: relative;
 }
 
 #search_bar > input {
-  border-radius: 15px; /* Adjust as needed */
+  border-radius: 15px;
   border: #000 1px solid;
-  width: 45vw;
+  width: 40vw;
   height: 4.5vh;
   padding: 1%;
-  padding-right: 40px; /* Ensure space for the button */
+  padding-right: 40px;
 }
 
-#search_bar > button {
+#search_bar > #search_butt {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -54,8 +58,11 @@ header > #search_bar {
   padding: 5px;
 }
 
-#search_bar > button > svg {
+#search_bar > #search_butt > svg {
+  fill: #000000;
+  max-height: 17px;
   width: 17px;
+  height: 17px;
 }
 
 #icons {
@@ -63,4 +70,102 @@ header > #search_bar {
   flex-direction: row;
   justify-content: space-between;
   width: 10%;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--orange-color);
+  text-decoration: none;
+}
+
+.nav-links p {
+  margin: 0;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background: var(--orange-color);
+  margin: 4px 0;
+}
+
+.nav-links-mobile {
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: #fff;
+  width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links-mobile.show {
+  display: flex;
+}
+.nav-links-svg > a > svg {
+  width: 2.5vw !important;
+  height: auto !important;
+}
+@media screen and (max-width: 768px) {
+  header {
+    height: 10vh;
+    font-size: 1em;
+  }
+
+  #logo > img {
+    width: 25vw;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  #icons {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .nav-links-mobile {
+    display: none;
+  }
+  #search_bar > input {
+    width: 30vw;
+  }
+  #logo > img {
+    width: 20vw;
+  }
+  #profile > a > img {
+    max-height: 10vh;
+  }
+  .nav-links-svg > a > svg {
+    width: 4vw !important;
+    height: auto !important;
+  }
+  
 }
